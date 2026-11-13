@@ -1,0 +1,17 @@
+{
+  "name": "dark-gpt",
+  "version": "1.0.0",
+  "description": "DARK GPT AI Assistant by Simon Tech Inc",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "groq-sdk": "^0.12.0",
+    "helmet": "^8.0.0"
+  }
+}
