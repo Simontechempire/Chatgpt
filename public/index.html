@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#212121">
+    <title>DARK GPT</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="side-top">
+            <div class="brand">
+                <div class="logo">D</div>
+                <span>DARK GPT</span>
+            </div>
+
+            <button class="icon-btn" id="closeSidebar" aria-label="Close sidebar">×</button>
+        </div>
+
+        <button class="new-chat" id="newChat">
+            <span>＋</span> New chat
+        </button>
+
+        <div class="history-title">Your chats</div>
+        <div class="history" id="history"></div>
+
+        <div class="sidebar-bottom">
+            <button class="profile" id="settingsButton">
+                <div class="avatar">S</div>
+                <div>
+                    <strong>Simon Tech Inc</strong>
+                    <small>DARK GPT</small>
+                </div>
+                <span class="profile-menu">⚙</span>
+            </button>
+        </div>
+
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <button class="icon-btn menu-btn" id="openSidebar" aria-label="Open sidebar">☰</button>
+
+            <div class="model-area">
+                <select id="modelSelect" aria-label="Select AI model">
+                    <option value="llama-3.3-70b-versatile">DARK GPT</option>
+                </select>
+            </div>
+
+            <button class="icon-btn" id="themeButton" aria-label="Toggle theme">☼</button>
+        </header>
+
+        <section class="chat-area" id="chatArea">
+
+            <div class="welcome" id="welcome">
+                <div class="welcome-logo">D</div>
+                <h1>What can I help with?</h1>
+                <p>Your AI assistant, powered by Groq.</p>
+
+                <div class="suggestions">
+                    <button class="suggestion" data-prompt="Help me write JavaScript code">
+                        <span>⌘</span>
+                        <strong>Write code</strong>
+                        <small>Build something amazing</small>
+                    </button>
+
+                    <button class="suggestion" data-prompt="Explain artificial intelligence in simple terms">
+                        <span>✧</span>
+                        <strong>Learn something</strong>
+                        <small>Understand new topics</small>
+                    </button>
+
+                    <button class="suggestion" data-prompt="Give me creative website project ideas">
+                        <span>◇</span>
+                        <strong>Get ideas</strong>
+                        <small>Explore new possibilities</small>
+                    </button>
+
+                    <button class="suggestion" data-prompt="Help me debug my JavaScript code">
+                        <span>⌕</span>
+                        <strong>Fix a problem</strong>
+                        <small>Find coding errors</small>
+                    </button>
+                </div>
+            </div>
+
+            <div class="messages" id="messages"></div>
+
+        </section>
+
+        <footer class="composer-area">
+
+            <form id="chatForm" class="composer">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Message DARK GPT..."
+                    rows="1"
+                    maxlength="12000"
+                    required
+                ></textarea>
+
+                <div class="composer-bottom">
+                    <div class="composer-info">
+                        <span>✧</span> AI can make mistakes. Check important information.
+                    </div>
+
+                    <button type="submit" id="sendButton" aria-label="Send message">
+                        ↑
+                    </button>
+                </div>
+
+            </form>
+
+            <div class="footer-text">
+                DARK GPT · Powered by Groq · SIMON TECH INC
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<div class="modal-overlay" id="settingsModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2>Settings</h2>
+            <button class="icon-btn" id="closeSettings">×</button>
+        </div>
+
+        <div class="setting-row">
+            <div>
+                <strong>Appearance</strong>
+                <small>Choose your preferred theme.</small>
+            </div>
+            <select id="appearance">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </div>
+
+        <div class="setting-row">
+            <div>
+                <strong>Chat history</strong>
+                <small>Delete all saved conversations.</small>
+            </div>
+            <button class="danger-btn" id="clearHistory">Clear</button>
+        </div>
+
+        <div class="about">
+            <div class="welcome-logo small-logo">D</div>
+            <h3>DARK GPT</h3>
+            <p>Version 1.0.0</p>
+            <p>Developed by SIMON TECH INC</p>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="/script.js"></script>
+</body>
+                      </html>
